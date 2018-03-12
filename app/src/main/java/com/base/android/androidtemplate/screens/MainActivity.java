@@ -1,7 +1,9 @@
-package com.base.android.androidtemplate;
+package com.base.android.androidtemplate.screens;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.base.android.androidtemplate.R;
 
 public class MainActivity extends AppCompatActivity {
 
