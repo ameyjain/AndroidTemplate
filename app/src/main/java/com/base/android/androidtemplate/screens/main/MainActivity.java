@@ -11,7 +11,8 @@ import com.base.android.androidtemplate.components.MainActivityComponent;
 
 import javax.inject.Inject;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainView
+{
 
     @Inject SharedPreferences sharedPreferences;
     @Inject MainPresenter presenter;
