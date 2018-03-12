@@ -1,4 +1,4 @@
-package com.base.android.androidtemplate.models;
+package com.base.android.androidtemplate.modules;
 
 import com.base.android.androidtemplate.network.MyRetrofitService;
 import com.google.gson.Gson;

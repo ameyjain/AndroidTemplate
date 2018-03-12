@@ -1,4 +1,4 @@
-package com.base.android.androidtemplate.models;
+package com.base.android.androidtemplate.modules;
 
 import android.content.Context;
 
@@ -14,7 +14,7 @@ import okhttp3.OkHttpClient;
  * Created by Amey on 3/11/18.
  */
 
-@Module(includes = ContextModule.class)
+@Module(includes = {ContextModule.class, NetworkModule.class})
 public class PicassoModule
 {
 

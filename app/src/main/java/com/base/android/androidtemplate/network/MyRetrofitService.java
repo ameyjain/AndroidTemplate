@@ -6,7 +6,7 @@ package com.base.android.androidtemplate.network;
  * Created by Amey on 3/11/18.
  */
 
-public class MyRetrofitService
+public interface MyRetrofitService
 {
 
 }

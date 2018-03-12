@@ -1,4 +1,4 @@
-package com.base.android.androidtemplate.models;
+package com.base.android.androidtemplate.modules;
 
 import android.content.Context;
 import android.util.Log;
@@ -17,7 +17,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * Created by Amey on 3/11/18.
  */
 
-@Module
+@Module(includes = ContextModule.class)
 public class NetworkModule
 {
     @Provides

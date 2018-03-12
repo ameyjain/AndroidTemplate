@@ -2,8 +2,9 @@ package com.base.android.androidtemplate;
 
 import android.app.Application;
 
+import com.base.android.androidtemplate.components.DaggerMyApplicationComponent;
 import com.base.android.androidtemplate.components.MyApplicationComponent;
-import com.base.android.androidtemplate.models.ContextModule;
+import com.base.android.androidtemplate.modules.ContextModule;
 
 /**
  * Created by Amey on 3/11/18.
@@ -11,11 +12,19 @@ import com.base.android.androidtemplate.models.ContextModule;
 
 public class MyApp extends Application
 {
-    MyApplicationComponent component;
+    private MyApplicationComponent component;
 
     @Override
     public void onCreate()
     {
         super.onCreate();
+        component = DaggerMyApplicationComponent.builder()
+                                                .contextModule(new ContextModule(this))
+                                                .build();
+    }
+
+    public MyApplicationComponent getApplicationComponent()
+    {
+        return component;
     }
 }
