@@ -1,5 +1,6 @@
 package com.base.android.androidtemplate.modules
 
+import com.base.android.androidtemplate.components.MyApplicationScope
 import com.base.android.androidtemplate.network.MyRetrofitService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -16,15 +17,21 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Module(includes = arrayOf(ContextModule::class))
 class MyRetrofitServiceModule {
 
-    @Provides fun provideMyRetrofitService(myRetrofit : Retrofit):
+    @Provides
+    @MyApplicationScope
+    fun provideMyRetrofitService(myRetrofit : Retrofit):
             MyRetrofitService = myRetrofit.create(MyRetrofitService::class.java)
 
-    @Provides fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient):
+    @Provides
+    @MyApplicationScope
+    fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient):
             Retrofit =  Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
             .baseUrl("https:/YOUR_BASE_URL")
             .build()
 
-    @Provides fun provideGson(): Gson = GsonBuilder().create()
+    @Provides
+    @MyApplicationScope
+    fun provideGson(): Gson = GsonBuilder().create()
 }

@@ -1,5 +1,6 @@
 package com.base.android.androidtemplate.modules
 
+import com.base.android.androidtemplate.components.AppComponent
 import com.base.android.androidtemplate.screens.main.MainActivity
 import com.base.android.androidtemplate.screens.main.MainPresenter
 import dagger.Module

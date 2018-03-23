@@ -10,7 +10,7 @@ import javax.inject.Scope
  */
 
 @PerActivity
-@Component(modules = arrayOf(MainActivityModule::class), dependencies = arrayOf(MyApplicationComponent::class))
+@Component(modules = arrayOf(MainActivityModule::class), dependencies = arrayOf(AppComponent::class))
 interface MainActivityComponent {
     fun inject(mainActivity: MainActivity)
 }
