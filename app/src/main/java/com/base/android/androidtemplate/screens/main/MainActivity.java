@@ -8,6 +8,7 @@ import com.base.android.androidtemplate.MyApp;
 import com.base.android.androidtemplate.R;
 import com.base.android.androidtemplate.components.DaggerMainActivityComponent;
 import com.base.android.androidtemplate.components.MainActivityComponent;
+import com.base.android.androidtemplate.modules.MainActivityModule;
 
 import javax.inject.Inject;
 
@@ -22,7 +23,10 @@ public class MainActivity extends AppCompatActivity implements MainView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MainActivityComponent component = DaggerMainActivityComponent.builder().myApplicationComponent(((MyApp) getApplication()).getApplicationComponent()).build();
+        MainActivityComponent component = DaggerMainActivityComponent.builder()
+                .myApplicationComponent(((MyApp) getApplication()).getApplicationComponent())
+                .mainActivityModule(new MainActivityModule(this))
+                .build();
         component.inject(this);
     }
 }
