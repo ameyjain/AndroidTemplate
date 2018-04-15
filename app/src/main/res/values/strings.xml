@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTemplate</string>
+    <string name="dialog_error_title_internet_connectivity">Connection Lost</string>
+    <string name="dialog_default_error_message_interney_connectivity">Please check your internect connection and try again</string>
 </resources>

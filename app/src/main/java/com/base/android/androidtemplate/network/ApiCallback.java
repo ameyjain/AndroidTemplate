@@ -14,9 +14,8 @@ public class ApiCallback<T extends BaseResponse> implements Callback<T> {
     @Override
     public void onResponse(Call<T> call, Response<T> response) {
 
-        if (response.isSuccessful() && response.errorBody() == null)
+        if (response.isSuccessful() && response.errorBody() == null && response.body() != null)
         {
-            assert response.body() != null;
             if (response.body().isSuccess())
             {
                 onSuccess(response.body());

@@ -1,18 +1,16 @@
 package com.base.android.androidtemplate.screens.main;
 
-import com.base.android.androidtemplate.screens.PresenterHelper;
+import com.base.android.androidtemplate.screens.base.BasePresenter;
 
 /**
  * Created by AmeyJain on 3/12/18.
  */
 
-public class MainPresenter implements PresenterHelper
+public class MainPresenter extends BasePresenter
 {
-    private MainView view;
-
     public MainPresenter(MainView view)
     {
-        this.view = view;
+        super(view);
     }
 
     @Override
@@ -24,6 +22,6 @@ public class MainPresenter implements PresenterHelper
     @Override
     public void onDestroy()
     {
-        view = null;
+        super.onDestroy();
     }
 }

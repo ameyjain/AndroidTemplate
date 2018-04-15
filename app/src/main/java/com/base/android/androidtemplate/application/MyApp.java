@@ -1,4 +1,4 @@
-package com.base.android.androidtemplate;
+package com.base.android.androidtemplate.application;
 
 import android.app.Application;
 
