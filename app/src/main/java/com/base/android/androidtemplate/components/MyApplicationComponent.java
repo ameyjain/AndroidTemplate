@@ -1,5 +1,6 @@
 package com.base.android.androidtemplate.components;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.base.android.androidtemplate.modules.MyRetrofitServiceModule;
@@ -7,6 +8,7 @@ import com.base.android.androidtemplate.modules.PicassoModule;
 import com.base.android.androidtemplate.modules.SharedPrefModule;
 import com.base.android.androidtemplate.network.MyRetrofitService;
 import com.base.android.androidtemplate.screens.main.MainActivity;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import dagger.Component;
@@ -24,4 +26,8 @@ public interface MyApplicationComponent
     MyRetrofitService getRetrofitService();
 
     SharedPreferences getSharedPreference();
+
+    Gson getGson();
+
+    Context getContext();
 }

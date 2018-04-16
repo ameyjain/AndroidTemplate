@@ -26,12 +26,12 @@ public class NetworkStateReceiver extends BroadcastReceiver
         DISCONNECTED
     }
 
-    private static NetworkStateReceiver INSTANCE = null;
     /**
      * Use this observable if you want to do anything when network state changes
      */
     private final BehaviorSubject<NetworkState> networkStateSubject = BehaviorSubject.create();
     private AlertDialog networkLostWarningDialog;
+    private static NetworkStateReceiver INSTANCE = null;
     private NetworkState lastNetworkState;
 
     //==============================================================================================

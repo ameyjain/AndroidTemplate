@@ -1,7 +1,9 @@
 package com.base.android.androidtemplate.network;
 
-public interface CallBack <Result,Error>
+import com.base.android.androidtemplate.models.BaseResponse;
+
+public interface CallBack <Result>
 {
     void onSuccess(Result result);
-    void onError(Error error);
+    void onError(BaseResponse error);
 }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.base.android.androidtemplate.R;
 import com.base.android.androidtemplate.screens.base.BaseActivity;
+import com.google.gson.Gson;
 
 import javax.inject.Inject;
 
